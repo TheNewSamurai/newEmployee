@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 target-densitydpi=medium-dpi, user-scalable=0" />
+<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+<link rel="stylesheet" href="/public/css/template.css">
+<link rel="stylesheet" href="../../public/css/template.css">
+<style>
+form {
+  margin-top: 10%;
+}
+
+#btnWrapper {
+  text-align: center;
+}
+
+#submitBtn {
+  position: absolute;
+  /*  The width of the button w/ left and right positions equals 100% in order to align the button to the center of the page since it is absolute positioned */
+  left: 12.5%;
+  right: 12.5%;
+  width: 75%;
+  /* */
+  font-size: 2em;
+  height: 33%;
+  bottom: 10%;
+}
+
+h1 {
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div>
+  <h1>Picture Time!</h1>
+</div>
+
+<div>
+  <p>Take picture of Employee/Guest from at least shoulder height</p>
+</div>
+
+      <button id="submitBtn" onclick="location.href='<%= url_for :action => :load_camera %>'">Start Camera</button>
+      <!--<button id="submitBtn" onclick="location.href='/app/Employee/index.html';">Start Camera</button>-->
+
+</body>
+</html>

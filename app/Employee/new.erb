@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 target-densitydpi=medium-dpi, user-scalable=0" />
+<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+<link rel="stylesheet" href="/public/css/template.css">
+<link rel="stylesheet" href="../../public/css/template.css">
+<style>
+form {
+  margin-top: 10%;
+}
+.formField {
+  position: relative;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.fieldLabel {
+  font-size: 1.5em;
+  position: relative;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.fieldInput {
+  position: absolute;
+  text-align: center;
+  font-size: 1.5em;
+  height: 100%;
+  width: auto;
+}
+
+#submitBtn {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+}
+</style>
+</head>
+
+<body>
+<div>
+  <p>Input Employee/Guest Information</p>
+</div>
+<form id="form" method="POST" action="<%= url_for :action => :create %>">
+  <input type="hidden" name="id" value="<%= @employee.object %>"/>
+     
+    <div class="formField">
+      <label for="employee[firstName]" class="fieldLabel">First Name:</label>
+      <input class="fieldInput" type="text" id="employee[firstName]" name="employee[firstName]" required="required"/>
+    </div>
+
+    <div class="formField">
+      <label for="employee[lastName]" class="fieldLabel">Last Name:</label>
+      <input class="fieldInput" type="text" id="employee[lastName]" name="employee[lastName]" required/>
+    </div>
+
+    <div class="formField">
+      <label for="employee[phone]" class="fieldLabel">Phone:</label>
+      <input class="fieldInput" type="tel" id="employee[phone]" name="employee[phone]" />
+    </div>
+      
+    <div class="formField">
+      <label for="employee[startDate]" class="fieldLabel">Start Date:</label>
+      <input class="fieldInput" type="date" id="employee[startDate]" name="employee[startDate]" />
+    </div>
+      
+    <div class="formField">
+      <label for="employee[endDate]" class="fieldLabel">End Date:</label>
+      <input class="fieldInput" type="date" id="employee[endDate]" name="employee[endDate]" />
+    </div>
+      
+    <div class="formField">
+      <label for="employee[status]" class="fieldLabel">Status:</label>
+      <input class="fieldInput" type="text" id="employee[status]" name="employee[status]" />
+    </div>
+      
+    <div class="formField">
+      <button id="submitBtn" type="submit">Create</button>
+      <!--<button id="submitBtn" type="submit" onclick="location.href='preparePic.html';">Create</button>-->
+    </div>
+</form>
+
+</body>
+</html>

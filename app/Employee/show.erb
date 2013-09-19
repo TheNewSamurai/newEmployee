@@ -1,0 +1,49 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @employee.firstName %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @employee.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">FirstName</div>
+            <div class="itemValue"><%= @employee.firstName %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">LastName</div>
+            <div class="itemValue"><%= @employee.lastName %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Dob</div>
+            <div class="itemValue"><%= @employee.dob %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">StartDate</div>
+            <div class="itemValue"><%= @employee.startDate %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EndDate</div>
+            <div class="itemValue"><%= @employee.endDate %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Status</div>
+            <div class="itemValue"><%= @employee.status %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

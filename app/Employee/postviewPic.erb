@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 target-densitydpi=medium-dpi, user-scalable=0" />
+<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+<link rel="stylesheet" href="/public/css/template.css">
+<link rel="stylesheet" href="../../public/css/template.css">
+<style>
+#canvasWrapper {
+  text-align: center;
+}
+
+#optionBtnLeft {
+  position: absolute;
+  width: 40%;
+  height: 25%;
+  font-size: 2em;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+}
+
+#optionBtnRight {
+  position: absolute;
+  width: 40%;
+  height: 25%;
+  font-size: 2em;
+  left: 55%;
+  right: 55%;
+  bottom: 5%;
+}
+
+h1 {
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+}
+</style>
+  <script type="text/javascript">
+  function properFit() {
+    var docWidth = window.innerWidth * 0.8;
+    var docHeight = window.innerHeight * 0.55;
+
+    document.getElementById("previewImg").width = docWidth;
+    document.getElementById("previewImg").height = docHeight;
+  }
+  </script>
+</head>
+
+<body onload="properFit();">
+  <div>
+    <h1>Use this Picture?</h1>
+  </div>
+
+  <div id="canvasWrapper">
+    <img id="previewImg" src="<%= Rho::Application.expandDatabaseBlobFilePath($imageHolder) %>" />
+  </div>
+  
+  <div id="btnWrapper">
+    <button id="optionBtnLeft" onclick="location.href='<%= url_for :action => :show %>'">Yes</button>
+    <button id="optionBtnRight" onclick="location.href='<%= url_for :action => :load_camera %>'">No</button>
+  </div>
+</body>
+</html>

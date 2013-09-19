@@ -1,0 +1,28 @@
+#sdk: "/Users/derekwarren/.rvm/gems/ruby-1.9.3-p385@rhomobile/gems/rhodes-4.0.0.beta.59"
+sdkversion: "4.0.0"
+name: "newEmployee"
+version: 1.0
+vendor: "rhomobile"
+build: "debug"
+bbver: 6.0
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator6.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.newemployee"
+  BundleURLScheme: "newemployee"
+wp:
+  productid: "47d0fa10-eb1e-0130-470a-406c8f595d54"
+symbian:
+  uid: "0xec292df9"
+android:
+  version: "4.0"
+  capabilities: 
+extensions:
+  - rhoconnect-client
+capabilities:
+  - camera
+  - phone

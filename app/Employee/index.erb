@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 target-densitydpi=medium-dpi, user-scalable=0" />
+<script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+<link rel="stylesheet" href="/public/css/template.css">
+<link rel="stylesheet" href="../public/css/template.css">
+<style type="text/css">
+
+#container {
+	vertical-align: bottom;
+	margin-top: 15%;
+}
+
+#start {
+	height: 50%;
+	text-align: center;
+	font-size: 100%;
+	width: 100%;
+}
+</style>
+</head>
+
+<body>
+	<div id="container">
+		<!--<button id="start" onclick="location.href='/app/Employee/index.html';">-->
+		<button id="start" onclick="location.href='<%= url_for :action => :new %>'">
+			<p>On Boarding Program for New Employees and/or Guests</p>
+			Click Me to get Started</button>
+		<button id="start" onclick="location.href='<%= url_for :action => :new %>'">
+			<p>On Boarding Program for New Employees and/or Guests</p>
+			Click Me to get Started</button>
+	</div>
+</body>
+</html>
