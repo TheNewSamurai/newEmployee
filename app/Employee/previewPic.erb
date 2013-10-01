@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/public/css/template.css">
 <link rel="stylesheet" href="../../public/css/template.css">
 <style>
-#canvasWrapper {
+#imgWrapper {
   text-align: center;
 }
 
@@ -51,12 +51,12 @@ h1 {
     <h1>Use this Picture?</h1>
   </div>
 
-  <div id="canvasWrapper">
+  <div id="imgWrapper">
     <img id="previewImg" src="<%= Rho::Application.expandDatabaseBlobFilePath($imageHolder) %>" />
   </div>
   
   <div id="btnWrapper">
-    <button id="optionBtnLeft" onclick="location.href='<%= url_for :action => :show %>'">Yes</button>
+    <button id="optionBtnLeft" onclick="location.href='<%= url_for :action => :assign_image %>'">Yes</button>
     <button id="optionBtnRight" onclick="location.href='<%= url_for :action => :load_camera %>'">No</button>
   </div>
 </body>

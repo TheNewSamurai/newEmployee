@@ -23,10 +23,12 @@
 <body>
 	<div id="container">
 		<!--<button id="start" onclick="location.href='/app/Employee/index.html';">-->
-		<button id="start" href="<%= :action => :new %>">
-			<p>On Boarding Program for New Employees and/or Guests</p>
+		<button id="start" onclick="location.href='<%= url_for :controller => :Employee, :action => :new %>'">
+			<p>On Boarding Program for New Employees and/or Guests!</p>
+			Click Me to get Started</button>
+		<button id="start" onclick="location.href='Employee'">
+			<p>List of Employees</p>
 			Click Me to get Started</button>
 	</div>
-
 </body>
 </html>

@@ -18,7 +18,7 @@ form {
   font-size: 1.5em;
   position: relative;
   text-align: left;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .fieldInput {
@@ -36,6 +36,13 @@ form {
   width: 100%;
 }
 </style>
+<script type="text/javascript">
+
+function invalidForm() {
+  alert("Invalid Form");
+}
+
+</script>
 </head>
 
 <body>
@@ -77,7 +84,6 @@ form {
       
     <div class="formField">
       <button id="submitBtn" type="submit">Create</button>
-      <!--<button id="submitBtn" type="submit" onclick="location.href='preparePic.html';">Create</button>-->
     </div>
 </form>
 
